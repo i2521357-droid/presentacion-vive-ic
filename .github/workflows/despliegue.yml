@@ -1,0 +1,49 @@
+# Nombre de la automatización que aparecerá en la pestaña "Actions"
+name: Deploy Static Content to GitHub Pages
+
+on:
+  push:
+    # La página web se actualizará sola cada vez que subamos cambios a la rama principal ("main")
+    branches: ["main"] 
+  
+  # Nos agrega un botón en GitHub para forzar la actualización de la página manualmente
+  workflow_dispatch:
+
+# Permisos de seguridad para que el sistema de GitHub pueda leer el código y publicar la web
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Evita conflictos si varios miembros del equipo suben cambios exactamente al mismo tiempo
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # Indica que el destino final es GitHub Pages y el proceso correrá en un servidor virtual Linux (Ubuntu)
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        # Paso 1: El servidor descarga una copia exacta de nuestros archivos locales
+        uses: actions/checkout@v4 
+      
+      - name: Setup Pages
+        # Paso 2: Configura internamente el entorno de GitHub Pages
+        uses: actions/configure-pages@v5 
+      
+      - name: Upload Artifact
+        # Paso 3: Empaqueta todos nuestros archivos (HTML, CSS, JS, fotos) ubicados en la carpeta principal ('.')
+        uses: actions/upload-pages-artifact@v3 
+        with:
+          path: '.' 
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        # Paso 4: Sube el paquete final a internet para que el enlace público se actualice
+        uses: actions/deploy-pages@v4
