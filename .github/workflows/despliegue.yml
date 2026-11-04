@@ -30,20 +30,20 @@ jobs:
     
     steps:
       - name: Checkout Code
-        # Paso 1: El servidor descarga una copia exacta de nuestros archivos locales
+        # Paso 1: El servidor descarga una copia exacta de nuestros archivos locales.
         uses: actions/checkout@v4 
       
       - name: Setup Pages
-        # Paso 2: Configura internamente el entorno de GitHub Pages
+        # Paso 2: Configura internamente el entorno de GitHub Pages.
         uses: actions/configure-pages@v5 
       
       - name: Upload Artifact
-        # Paso 3: Empaqueta todos nuestros archivos (HTML, CSS, JS, fotos) ubicados en la carpeta principal ('.')
+        # Paso 3: Empaqueta todos nuestros archivos (HTML, CSS, JS, fotos) ubicados en la carpeta principal ('.').
         uses: actions/upload-pages-artifact@v3 
         with:
           path: '.' 
       
       - name: Deploy to GitHub Pages
         id: deployment
-        # Paso 4: Sube el paquete final a internet para que el enlace público se actualice
+        # Paso 4: Sube el paquete final a internet para que el enlace público se actualice.
         uses: actions/deploy-pages@v4
