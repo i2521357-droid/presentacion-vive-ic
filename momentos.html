@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentos Vive IC</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="index.html" class="btn-primary" style="background-color: var(--dark);"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
+    </div>
+
+    <section class="galeria-eventos">
+        <h2><i class="fas fa-images"></i> MOMENTOS VIVE IC</h2>
+        <p class="subtitle">Registro de nuestra presentación académica y el equipo de desarrollo de Sistemas de Información (Daniel, Jhonatan, Alizee y Alex).</p>
+        <div class="grid-fotos">
+            <div class="foto-wrapper"><img src="foto1.jpeg" alt="Momento Vive IC 1" class="foto-evento"></div>
+            <div class="foto-wrapper"><img src="foto2.jpeg" alt="Momento Vive IC 2" class="foto-evento"></div>
+            <div class="foto-wrapper"><img src="foto3.jpeg" alt="Momento Vive IC 3" class="foto-evento"></div>
+            <div class="foto-wrapper"><img src="foto4.jpeg" alt="Momento Vive IC 1" class="foto-evento"></div>
+            <div class="foto-wrapper"><img src="foto5.jpeg" alt="Momento Vive IC 2" class="foto-evento"></div>
+            <div class="foto-wrapper"><img src="foto6.jpeg" alt="Momento Vive IC 3" class="foto-evento"></div>
+        </div>
+    </section>
+
+    <!-- Visor de fotos -->
+    <div id="modal-foto" class="modal">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="img-ampliada" alt="Visor de imagen">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

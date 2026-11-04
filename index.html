@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celulares Jireh - Proyecto IC</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabecera Principal con las dos únicas opciones -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Sistema Celulares Jireh</h1>
+            <p>Plataforma integral de gestión analizada y diseñada por estudiantes del Instituto Continental para optimizar las operaciones técnicas y comerciales en Villa Perené.</p>
+            
+            <div class="opciones-principales">
+                <a href="https://github.com/i2521357-droid/demo-celulares-jireh" target="_blank" class="btn-primary">
+                    <i class="fab fa-github"></i> MI REPOSITORIO GITHUB
+                </a>
+                <a href="momentos.html" class="btn-secondary">
+                    <i class="fas fa-camera-retro"></i> MOMENTOS VIVE IC
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Información Ampliada del Negocio y Sistema -->
+    <section class="empresa-info">
+        <h2><i class="fas fa-project-diagram"></i> Documentación y Alcance</h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3><i class="fas fa-store"></i> El Negocio</h3>
+                <p>Bajo la gerencia de Yuber Vicaña Mapele en Villa Perené, el establecimiento destaca por su especialización en reparación de hardware de celulares, microsoldadura de precisión, desbloqueo de dispositivos y venta. El objetivo del proyecto es estructurar lógicamente su atención diaria al cliente y su historial técnico.</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-server"></i> Stack Tecnológico</h3>
+                <p>El desarrollo se plantea sobre un entorno virtual de <strong>Python</strong> utilizando el framework <strong>Flask</strong> y SQLAlchemy. La persistencia de datos se diseña en <strong>MySQL</strong> (modelado en MySQL Workbench). Para el control de versiones se emplea Git, el código se estructura en Visual Studio 2022 y la interfaz emplea HTML, CSS y JavaScript.</p>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-network-wired"></i> Integración APISPERU</h3>
+                <p>Para agilizar el registro de clientes y comprobantes, la propuesta integra un módulo automatizado mediante <strong>APISPERU</strong>. Esto permite la validación instantánea y extracción de datos oficiales a partir de números de DNI y RUC, reduciendo el margen de error humano al momento de registrar una reparación o venta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estructura Lógica y Áreas -->
+    <section class="modulos-info" style="background-color: var(--white); padding: 50px 30px; border-radius: 12px; margin: 0 auto 60px auto; max-width: 1100px; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
+        <h2 style="text-align: center; margin-bottom: 40px; font-size: 2rem; color: var(--dark);"><i class="fas fa-cogs"></i> Arquitectura de Procesos</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+            <div style="padding: 25px; border-left: 4px solid var(--primary); background: var(--light); border-radius: 0 8px 8px 0;">
+                <h4 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 10px;">Fase del Proyecto</h4>
+                <p>El sistema se encuentra estrictamente en fase de <strong>análisis, diseño y documentación</strong>. Se están planteando y proponiendo las bases arquitectónicas de la lógica de negocio antes del despliegue final.</p>
+            </div>
+            <div style="padding: 25px; border-left: 4px solid var(--primary); background: var(--light); border-radius: 0 8px 8px 0;">
+                <h4 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 10px;">Flujo de Apertura</h4>
+                <p>La propuesta documenta detalladamente los protocolos de <strong>apertura diaria del local</strong>, asegurando que las interfaces estén listas para recibir y registrar a los clientes desde el primer minuto de atención.</p>
+            </div>
+            <div style="padding: 25px; border-left: 4px solid var(--primary); background: var(--light); border-radius: 0 8px 8px 0;">
+                <h4 style="color: var(--primary); font-size: 1.2rem; margin-bottom: 10px;">Departamentos</h4>
+                <p>La lógica se divide exclusivamente en tres áreas interconectadas: <strong>Ventas, Servicio Técnico y Caja</strong>. Se ha prescindido intencionalmente de un módulo de almacén aislado para garantizar un flujo directo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Fotos (Necesaria para que el enlace del menú superior funcione) -->
+    <section class="galeria-eventos" id="momentos-vive-ic">
+        <h2><i class="fas fa-images"></i> MOMENTOS VIVE IC</h2>
+        <p class="subtitle">Registro de nuestra presentación académica y el equipo de desarrollo de Sistemas de Información (Daniel, Jhonatan, Alizee y Alex).</p>
+        <div class="grid-fotos">
+            <div class="foto-wrapper"><img src="foto1.jpeg" alt="Momento Vive IC 1" class="foto-evento"></div>
+            <div class="foto-wrapper"><img src="foto2.jpeg" alt="Momento Vive IC 2" class="foto-evento"></div>
+            <div class="foto-wrapper"><img src="foto3.jpeg" alt="Momento Vive IC 3" class="foto-evento"></div>
+            <div class="foto-wrapper"><img src="foto4.jpeg" alt="Momento Vive IC 1" class="foto-evento"></div>
+            <div class="foto-wrapper"><img src="foto5.jpeg" alt="Momento Vive IC 2" class="foto-evento"></div>
+            <div class="foto-wrapper"><img src="foto6.jpeg" alt="Momento Vive IC 3" class="foto-evento"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Desarrollado por el equipo de Desarrollo de Sistemas de Información - Instituto Continental.</p>
+    </footer>
+
+    <!-- Visor de fotos -->
+    <div id="modal-foto" class="modal">
+        <span class="cerrar">&times;</span>
+        <img class="modal-contenido" id="img-ampliada" alt="Visor de imagen">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
